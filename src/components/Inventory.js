@@ -3,6 +3,7 @@ import AddFishForm from "./AddFishForm";
 import EditFishForm from "./EditFishForm";
 
 export default class Inventory extends React.Component {
+  
   render() {
     const fishes = Object.keys(this.props.fishes);
     return (

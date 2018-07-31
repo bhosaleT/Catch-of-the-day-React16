@@ -1,6 +1,7 @@
 import React from "react";
 
 class EditFishForm extends React.Component {
+  
   //  when the event is changed React nullifies it but we can catch it using event.currentTarget.value
   // then we change the event.currentTarget.name i.e. input field by the new value.
   // and change the state. by getting a function dropped down through app.js
