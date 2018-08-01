@@ -625,11 +625,11 @@ input[type=submit].facebook:after {
 }
 button.twitter,
 input[type=submit].twitter {
-  background: #5ea9dd;
+  background: #dd5e5e;
 }
 button.twitter:after,
 input[type=submit].twitter:after {
-  background: #2c8dd0;
+  background: #b42424;
 }
 .store-selector {
   background: #fff;
