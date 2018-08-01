@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Header = (props) => (
       <header className="top">
@@ -13,5 +14,10 @@ const Header = (props) => (
         </h3>
       </header>
     )
+
+// Header.propTypes just helps the developer configure the props to take only one particular type of dataType.
+Header.propTypes = {
+  subtitle: PropTypes.string.isRequired
+};
 
 export default Header;

@@ -1,6 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class EditFishForm extends React.Component {
+  static propTypes = {
+    fish: PropTypes.shape({
+      image: PropTypes.string,
+      name : PropTypes.string,
+      desc : PropTypes.string,
+      status: PropTypes.string,
+      price: PropTypes.number
+    }),
+    index: PropTypes.string,
+    updateFish: PropTypes.func
+  };
   
   //  when the event is changed React nullifies it but we can catch it using event.currentTarget.value
   // then we change the event.currentTarget.name i.e. input field by the new value.

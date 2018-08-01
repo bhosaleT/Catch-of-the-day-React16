@@ -1,8 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { formatPrice } from "../helpers";
 
+
 export default class Fish extends React.Component {
-  render() {
+
+  // The addition of proptypes for the fish component lets us add a shape checker which checks an object of a particular type with all the object elements having a specific type.
+  static propTypes = {
+    fishDetails: PropTypes.shape ({
+      image: PropTypes.string,
+      name : PropTypes.string,
+      desc : PropTypes.string,
+      status: PropTypes.string,
+      price: PropTypes.number
+    }),
+    addToOrder: PropTypes.func
+  };
+
+    render() {
     const { image, name, price, desc, status } = this.props.fishDetails;
     const isAvailable = status === "available";
     return (

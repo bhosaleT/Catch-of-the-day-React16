@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import {getFunName} from '../helpers';
 
 export default class StorePicker extends React.Component {
+    static propTypes  = {
+        history: PropTypes.object
+    };
     //Create a reference to get the input from the form.
     myInput = React.createRef();
 

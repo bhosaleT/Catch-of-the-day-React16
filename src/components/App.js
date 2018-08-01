@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Header from "./Header.js";
 import Inventory from "./Inventory";
 import Order from "./Order";
@@ -7,6 +8,10 @@ import Fish from "./Fish";
 import base from "../base";
 
 class App extends React.Component {
+  static propTypes = {
+    match: PropTypes.object
+  };
+
   state = {
     fishes: {},
     order: {}
@@ -102,7 +107,11 @@ class App extends React.Component {
             ))}
           </ul>
         </div>
-        <Order deleteOrder = {this.deleteOrder} fishes={this.state.fishes} orders={this.state.order} />
+        <Order
+          deleteOrder={this.deleteOrder}
+          fishes={this.state.fishes}
+          orders={this.state.order}
+        />
         <Inventory
           deleteFish={this.deleteFish}
           updateFish={this.updateFish}
@@ -114,5 +123,4 @@ class App extends React.Component {
     );
   }
 }
-3;
 export default App;
